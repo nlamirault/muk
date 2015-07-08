@@ -10,6 +10,9 @@ http://mirrors.kernel.org/linuxmint//stable/17.2/linuxmint-17.2-cinnamon-64bit.i
 # CentOS
 http://centos.mirrors.ovh.net/ftp.centos.org/7/isos/x86_64/CentOS-7-x86_64-LiveGNOME-1503.iso;SHA256;2cfc9fab2edb0be51b75ee63528b61cad79489129d2aad1713eeed1b4117ab47
 
+# OpenSuse
+http://download.opensuse.org/distribution/openSUSE-stable/iso/openSUSE-13.2-GNOME-Live-x86_64.iso;SHA256;d1879742ef469495c6472839d637fa3bfdfa8682452e0d349aa915db27798030
+
 # Kali
 http://cdimage.kali.org/kali-1.1.0a/kali-linux-1.1.0a-amd64.iso;SHA1;2b8d2db20e2709c5e9e0f9f9bbd8606c9b9e729f
 
