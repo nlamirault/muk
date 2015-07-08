@@ -33,6 +33,7 @@ help:
 	@echo -e "$(WARN_COLOR)build fs=<sdaX> $(NO_COLOR) : Build the USB key"
 	@echo -e "$(WARN_COLOR)clean           $(NO_COLOR) : Clean environment"
 
+.PHONY: iso
 iso:
 	@bin/download.sh
 

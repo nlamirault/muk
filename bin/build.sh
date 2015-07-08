@@ -19,22 +19,21 @@ OK_COLOR="\033[32;01m"
 ERROR_COLOR="\033[31;01m"
 WARN_COLOR="\033[33;01m"
 
+MOUNT="$HOME/mnt"
 ISO="iso"
-URIS="${ISO}/uri.txt"
+GRUB="grub"
+DEV="/dev/$1"
 
-echo "[muk] Download Linux ISOs"
-for line in `grep -v -E "#|^\$" ${URIS}`; do
-    IFS=';' read -a data <<< "${line}"
-    # echo -e "[muk] URI: ${data[0]}"
-    # echo -e "[muk] Type: ${data[1]}"
-    # echo -e "[muk] Value: ${data[2]}"
-    name=`echo ${data[0]}|awk -F"/" '{print $NF}'`
-    echo -e "[muk] ISO: $name"
-    if [ -f $ISO/${name} ];
-    then
-        echo -e "${OK_COLOR}[muk] ISO already present${NO_COLOR}"
-    else
-        echo -e "${OK_COLOR}[muk] Download ISO for $name${NO_COLOR}"
-        curl --silent -o ${ISO}/${name} -L ${data[0]}
-    fi
-done
+echo -e "${OK_COLOR}[muk] Use ${DEV} for USB Key${NO_COLOR}"
+
+echo -e "${OK_COLOR}[muk] Initialize key${NO_COLOR}"
+mkdir -p ${MOUNT}/muk/{boot,iso}
+# mkfs.vfat -n MUK ${DEV}
+# mount ${DEV} ${MOUNT}/muk
+
+echo -e "${OK_COLOR}[muk] Install GRUB${NO_COLOR}"
+# grub-install --no-floppy --root-directory=${MOUNT}/muk ${DEV}
+
+echo -e "${OK_COLOR}[muk] Install GRUB${NO_COLOR}"
+# cp ${ISO}/*.iso ${MOUNT}/muk/iso
+cp -r ${GRUB} ${MOUNT}/muk/boot/
