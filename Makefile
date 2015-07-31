@@ -30,16 +30,24 @@ all: help
 help:
 	@echo -e "$(OK_COLOR)==== $(APP) [$(VERSION)] ====$(NO_COLOR)"
 	@echo -e "$(WARN_COLOR)iso $(NO_COLOR)             : Download isos"
-	@echo -e "$(WARN_COLOR)build fs=<sdaX> $(NO_COLOR) : Build the USB key"
+	@echo -e "$(WARN_COLOR)run iso=<file> $(NO_COLOR)  : Run iso using QEMU"
+	@echo -e "$(WARN_COLOR)init fs=<sdbX>$(NO_COLOR)   : Create a FAT32-formatted USB disk"
+	@echo -e "$(WARN_COLOR)build fs=<sdbX> $(NO_COLOR) : Build the USB key"
 	@echo -e "$(WARN_COLOR)clean           $(NO_COLOR) : Clean environment"
 
 .PHONY: iso
 iso:
 	@bin/download.sh
 
-.PHONY: build
-build: init
-	mount /dev/$(fs) $(OUTPUT)
-	mkdir $(OUTPUT)/boot
-#	grub-install --target=i386-pc --recheck --boot-directory=/mnt/boot /dev/sdX
-	grub-install --target x86_64-efi --efi-directory $(OUTPUT) --boot-directory=$(OUTPUT)/boot --removable
+.PHONY: run
+run:
+	qemu-system-x86_64 -m 1024 -boot c -net nic -net user -localtime -cdrom $(iso)
+
+.PHONY: init
+init:
+	@sudo mkfs.vfat -F 32 -n muk -I /dev/$(fs)
+#	@sudo mkfs.ext4 -n muk -I /dev/$(fs)
+
+# .PHONY: build
+# build:
+# 	@sudo bin/build.sh $(fs)
