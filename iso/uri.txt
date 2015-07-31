@@ -16,5 +16,8 @@ http://download.opensuse.org/distribution/openSUSE-stable/iso/openSUSE-13.2-GNOM
 # Kali
 http://cdimage.kali.org/kali-1.1.0a/kali-linux-1.1.0a-amd64.iso;SHA1;2b8d2db20e2709c5e9e0f9f9bbd8606c9b9e729f
 
+# Archassault
+http://cdimage.debian.org/mirror/archassault/iso/ArchAssault-openbox-2015.05.25-x86_64.iso;SHA1;740f76783a9f0629bc499b8460d6d24989da74cc
+
 # ElementaryOS
 http://kent.dl.sourceforge.net/project/elementaryos/stable/elementaryos-freya-amd64.20150411.iso;SHA256;a7b8edfe95eb1c12745e02c63f830cad06ee756f552cba1cdca7bc30b7ca39e7
