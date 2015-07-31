@@ -12,6 +12,8 @@ Creates a multiboot USB key
 
         $ make init fs=sdb1
 
+* Create a new partition, primary and bootable (using fdisk, cfdisk, or parted)
+
 * Download iso :
 
         $ make iso
@@ -23,15 +25,15 @@ Creates a multiboot USB key
         $ sudo mkdir /mnt/muk
         $ sudo mount /dev/sdb1 /mnt/muk
         $ sudo grub-install --force --no-floppy --boot-directory=/mnt/muk/boot /dev/sdb
-        $ sudo cp grub/grub.cfg /mnt/muk/boot/grub/
-        $ sudo rsync -auvzh --exclude '*.txt' --progress iso /mnt/muk/
+        $ sudo cp -r grub /mnt/muk/boot/
+        $ sudo rsync -auvzh --exclude '*.txt' --progress iso /mnt/muk/boot/
         $ sudo umount /mnt/muk
 
 ## Test
 
 You could test your USB
 
-    $ sudo qemu-system-x86_64 -usb -usbdevice disk:/dev/sdb1
+    $ sudo qemu-system-x86_64 -hda /dev/sdb
 
 You could test downloaded iso :
 
