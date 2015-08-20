@@ -14,8 +14,7 @@ http://centos.mirrors.ovh.net/ftp.centos.org/7/isos/x86_64/CentOS-7-x86_64-LiveG
 http://download.opensuse.org/distribution/openSUSE-stable/iso/openSUSE-13.2-GNOME-Live-x86_64.iso;SHA256;d1879742ef469495c6472839d637fa3bfdfa8682452e0d349aa915db27798030
 
 # Kali
-http://cdimage.kali.org/kali-1.1.0a/kali-linux-1.1.0a-amd64.iso;SHA1;2b8d2db20e2709c5e9e0f9f9bbd8606c9b9e729f
-
+ihttp://cdimage.kali.org/kali-2.0/kali-linux-light-2.0-amd64.iso;SHA1;fc54f0b4b48ded247e5549d9dd9ee5f1465f24ab
 # Archassault
 http://cdimage.debian.org/mirror/archassault/iso/ArchAssault-openbox-2015.05.25-x86_64.iso;SHA1;740f76783a9f0629bc499b8460d6d24989da74cc
 
