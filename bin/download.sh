@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Copyright (C) 2015 Nicolas Lamirault <nicolas.lamirault@gmail.com>
+# Copyright (C) 2015, 2016 Nicolas Lamirault <nicolas.lamirault@gmail.com>
 
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -35,6 +35,6 @@ for line in `grep -v -E "#|^\$" ${URIS}`; do
         echo -e "${OK_COLOR}[muk] ISO already present${NO_COLOR}"
     else
         echo -e "${OK_COLOR}[muk] Download ISO for $name${NO_COLOR}"
-        curl --silent -o ${ISO}/${name} -L ${data[0]}
+        curl --progress-bar -o ${ISO}/${name} -L ${data[0]}
     fi
 done

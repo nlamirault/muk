@@ -1,8 +1,8 @@
 # ArchLinux
-http://mirrors.kernel.org/archlinux/iso/2015.07.01/archlinux-2015.07.01-dual.iso;SHA1;a025ac8e23131b038a0b7f949faeb04d382e5b25
+http://mirrors.kernel.org/archlinux/iso/2016.01.01/archlinux-2016.01.01-dual.iso;SHA1;ff79a9629a83dfedad6c3a58e2e7838c86282315
 
 # Ubuntu
-http://ftp.oleane.net/ubuntu-cd/xubuntu/15.04/release/xubuntu-15.04-desktop-amd64.iso;SHA256;539c3ae45f4197bda920cd912020ce6571a1f553a319e4620af0f9bc72c2a134
+http://cdimage.ubuntu.com/xubuntu/releases/15.10/release/xubuntu-15.10-desktop-amd64.iso;SHA256;f85fb3fc9f2ca48118a03918a766c3c8c57627b5e33f86aad4698d50417c704a
 
 # Linux Mint
 http://mirrors.kernel.org/linuxmint//stable/17.2/linuxmint-17.2-cinnamon-64bit.iso;MD5;b8a0651bb0086519fbf7a70fc12db17e
@@ -14,10 +14,7 @@ http://centos.mirrors.ovh.net/ftp.centos.org/7/isos/x86_64/CentOS-7-x86_64-LiveG
 http://download.opensuse.org/distribution/openSUSE-stable/iso/openSUSE-13.2-GNOME-Live-x86_64.iso;SHA256;d1879742ef469495c6472839d637fa3bfdfa8682452e0d349aa915db27798030
 
 # Kali
-ihttp://cdimage.kali.org/kali-2.0/kali-linux-light-2.0-amd64.iso;SHA1;fc54f0b4b48ded247e5549d9dd9ee5f1465f24ab
-
-# Archassault
-http://cdimage.debian.org/mirror/archassault/iso/ArchAssault-openbox-2015.05.25-x86_64.iso;SHA1;740f76783a9f0629bc499b8460d6d24989da74cc
+http://cdimage.kali.org/kali-2.0/kali-linux-light-2.0-amd64.iso;SHA1;fc54f0b4b48ded247e5549d9dd9ee5f1465f24ab
 
 # ElementaryOS
 http://kent.dl.sourceforge.net/project/elementaryos/stable/elementaryos-freya-amd64.20150411.iso;SHA256;a7b8edfe95eb1c12745e02c63f830cad06ee756f552cba1cdca7bc30b7ca39e7
