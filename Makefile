@@ -1,4 +1,4 @@
-# Copyright (C) 2015 Nicolas Lamirault <nicolas.lamirault@gmail.com>
+# Copyright (C) 2015, 2016 Nicolas Lamirault <nicolas.lamirault@gmail.com>
 
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -29,11 +29,17 @@ all: help
 
 help:
 	@echo -e "$(OK_COLOR)==== $(APP) [$(VERSION)] ====$(NO_COLOR)"
-	@echo -e "$(WARN_COLOR)iso $(NO_COLOR)             : Download isos"
+	@echo -e "$(WARN_COLOR)iso $(NO_COLOR)             : Download ISOs"
+	@echo -e "$(WARN_COLOR)build $(NO_COLOR)           : Build USB key"
 	@echo -e "$(WARN_COLOR)run iso=<file> $(NO_COLOR)  : Run iso using QEMU"
+	@echo -e "$(WARN_COLOR)test device=<device> $(NO_COLOR)  : Testing USB drive with KVM"
 	@echo -e "$(WARN_COLOR)init fs=<sdbX>$(NO_COLOR)   : Create a FAT32-formatted USB disk"
 	@echo -e "$(WARN_COLOR)build fs=<sdbX> $(NO_COLOR) : Build the USB key"
 	@echo -e "$(WARN_COLOR)clean           $(NO_COLOR) : Clean environment"
+
+.PHONY: build
+build:
+	@bin/build.sh $(mount) $(device)
 
 .PHONY: iso
 iso:
@@ -43,11 +49,12 @@ iso:
 run:
 	qemu-system-x86_64 -m 1024 -boot c -net nic -net user -localtime -cdrom $(iso)
 
+.PHONY: test
+test:
+	qemu-system-x86_64 -enable-kvm -cpu host -machine type=pc,accel=kvm -vga std -m 2G -name muk -drive file=$(device),readonly,cache=none,if=virtio
+#	sudo qemu-system-x86_64 -usb -usbdevice disk:$(device)
+
 .PHONY: init
 init:
 	@sudo mkfs.vfat -F 32 -n muk -I /dev/$(fs)
 #	@sudo mkfs.ext4 -n muk -I /dev/$(fs)
-
-# .PHONY: build
-# build:
-# 	@sudo bin/build.sh $(fs)
