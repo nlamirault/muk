@@ -10,6 +10,9 @@ https://mirrors.kernel.org/linuxmint//stable/18/linuxmint-18-cinnamon-64bit.iso;
 # CentOS
 http://centos.mirrors.ovh.net/ftp.centos.org/7/isos/x86_64/CentOS-7-x86_64-LiveGNOME-1511.iso;SHA256;10dccb7c028d7afafbe1ade59dacf809edb3af2f24b1b69bafce9e6ec3c6ee17
 
+# Fedora
+https://download.fedoraproject.org/pub/fedora/linux/releases/24/Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-24-1.2.iso;SHA256;8e12d7ba1fcf3328b8514d627788ee0146c0eef75a5e27f0674ee1fe4f1feaf6
+
 # # OpenSuse
 # http://download.opensuse.org/distribution/openSUSE-stable/iso/openSUSE-13.2-GNOME-Live-x86_64.iso;SHA256;d1879742ef469495c6472839d637fa3bfdfa8682452e0d349aa915db27798030
 
