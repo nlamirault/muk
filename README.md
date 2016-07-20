@@ -1,6 +1,12 @@
 # Muk
 
+[![License Apache 2][badge-license]][LICENSE][]
+![Version][badge-release]
+
+![Muk](https://github.com/nlamirault/muk/raw/master/muk.png "Muk")
+
 Creates a multiboot USB key
+
 
 ## Usage
 
@@ -12,7 +18,7 @@ Creates a multiboot USB key
 
         $ make init fs=sdb1
 
-* Create a new partition, primary and bootable (using fdisk, cfdisk, or parted)
+* Create a new partition, primary and bootable (using `fdisk`, `cfdisk`, or `parted`)
 
 * Download iso :
 
@@ -20,14 +26,26 @@ Creates a multiboot USB key
 
 * Remove your USB device, and plug it back in. The auto-mounter on your OS should detect it now.
 
-* Create the USB key :
+* Create the USB key using the device (like `/dev/sdb1`) and the mount directory:
 
-        $ sudo mkdir /mnt/muk
-        $ sudo mount /dev/sdb1 /mnt/muk
-        $ sudo grub-install --force --no-floppy --boot-directory=/mnt/muk/boot /dev/sdb
-        $ sudo cp -r grub /mnt/muk/boot/
-        $ sudo rsync -auvzh --exclude '*.txt' --progress iso /mnt/muk/boot/
-        $ sudo umount /mnt/muk
+        $ sudo bin/build.sh /run/media/userMUK1 sdb
+
+* Umount the USB device.
+
+
+## Development
+
+* Test the USB key using QEmu:
+
+        $ sudo make test device=/dev/sdb
+
+
+## Create the key :
+
+    mkdir -p /run/media/nlamirault/MUK/boot/
+    sudo grub-install --target=i386-pc --recheck --boot-directory=/run/media/nlamirault/MUK/boot /dev/sdb
+
+
 
 ## Test
 
@@ -56,3 +74,6 @@ Nicolas Lamirault <nicolas.lamirault@gmail.com>
 
 
 [LICENSE]: https://github.com/nlamirault/muk/blob/master/LICENSE
+
+[badge-license]: https://img.shields.io/badge/license-Apache_2-green.svg
+[badge-release]: https://img.shields.io/github/release/nlamirault/muk.svg
