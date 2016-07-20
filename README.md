@@ -7,6 +7,8 @@
 
 Creates a multiboot USB key
 
+![0.1.0](https://github.com/nlamirault/muk/raw/master/muk-0.1.0.png "0.1.0")
+
 
 ## Usage
 
