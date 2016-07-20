@@ -21,15 +21,16 @@
 # http://grub.gibibit.com/Theme_format
 #
 
-
-# Global Property
 title-text: "Muk"
 title-font: "Sans Regular 12"
 title-color: "#000000"
+
 message-font: "Fixed Regular 13"
 message-color: "#FFFFFF"
 message-bg-color: "#f6f6f6"
+
 desktop-color: "#000000"
+
 terminal-box: "menu_bkg_*.png"
 terminal-font: "Fixed Regular 13"
 
@@ -52,7 +53,7 @@ terminal-font: "Fixed Regular 13"
 		selected_item_pixmap_style= "select_bkg_*.png"
 		menu_pixmap_style = "menu_bkg_*.png"
 		scrollbar = true
-		scrollbar_width = 24
+		scrollbar_width = 14
 		scrollbar_thumb = "sb_thumb_*.png"
 		scrollbar_frame = "sb_frame_*.png"
 }
@@ -70,7 +71,7 @@ terminal-font: "Fixed Regular 13"
    ticks_disappear = false
    start_angle = -67
    end_angle = -67
-   center_bitmap = "archlogo.png"
+   center_bitmap = "muklogo.png"
    tick_bitmap = "tick.png"
 }
 
