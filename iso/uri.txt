@@ -19,8 +19,8 @@ https://download.fedoraproject.org/pub/fedora/linux/releases/24/Workstation/x86_
 # Kali
 http://cdimage.kali.org/kali-2.0/kali-linux-light-2.0-amd64.iso;SHA1;fc54f0b4b48ded247e5549d9dd9ee5f1465f24ab
 
+# Tails
+https://tails.void.gr/tails/stable/tails-i386-2.4/tails-i386-2.4.iso;GPG;https://tails.boum.org/tails-signing.key
+
 # # Archassault
 # http://cdimage.debian.org/mirror/archassault/iso/ArchAssault-openbox-2015.05.25-x86_64.iso;SHA1;740f76783a9f0629bc499b8460d6d24989da74cc
-
-# # ElementaryOS
-# http://kent.dl.sourceforge.net/project/elementaryos/stable/elementaryos-freya-amd64.20150411.iso;SHA256;a7b8edfe95eb1c12745e02c63f830cad06ee756f552cba1cdca7bc30b7ca39e7
