@@ -21,7 +21,7 @@
 # http://grub.gibibit.com/Theme_format
 #
 
-title-text: "Muk"
+title-text: "Muk v0.2.0"
 title-font: "Sans Regular 12"
 title-color: "#000000"
 
@@ -37,7 +37,7 @@ terminal-font: "Fixed Regular 13"
 # Show the boot menu
 + boot_menu {
 		left = 10%
-		width = 100%
+		width = 80%
 		top = 115
 		height = 60%
 		item_font = "Sans Regular 12"
@@ -78,7 +78,7 @@ terminal-font: "Fixed Regular 13"
 # Show an informational message.
 + hbox {
     top = 100%-35
-    left = 13%
+    left = 7%
     + label { text = "↑↓" color = "#1692d0" }
     + label { text = " : select       " color = "gainsboro" }
     + label { text = "enter" color = "#1692d0" }
@@ -90,7 +90,7 @@ terminal-font: "Fixed Regular 13"
 }
 
 + label {
-    text = "Muk - https://github.com/nlamirault/muk/"
+    text = "Muk v0.2.0 - https://github.com/nlamirault/muk/"
     font = "Sans 16"
     color = "#1692d0"
     align = center
