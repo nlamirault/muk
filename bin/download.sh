@@ -18,21 +18,22 @@ NO_COLOR="\033[0m"
 OK_COLOR="\033[32;01m"
 ERROR_COLOR="\033[31;01m"
 WARN_COLOR="\033[33;01m"
+DEBUG_COLOR="\033[34;01m"
 
 ISO="iso"
 URIS="${ISO}/uri.txt"
 
-echo "[muk] Download Linux ISOs"
-for line in `grep -v -E "#|^\$" ${URIS}`; do
+echo -e "${OK_COLOR}[muk] Download Linux ISOs${NO_COLOR}"
+for line in $(grep -v -E "#|^\$" ${URIS}); do
     IFS=';' read -a data <<< "${line}"
-    # echo -e "[muk] URI: ${data[0]}"
-    # echo -e "[muk] Type: ${data[1]}"
-    # echo -e "[muk] Value: ${data[2]}"
-    name=`echo ${data[0]}|awk -F"/" '{print $NF}'`
-    echo -e "[muk] ISO: $name"
+    echo -e "${DEBUG_COLOR}[muk] URI: ${data[0]}${NO_COLOR}"
+    echo -e "${DEBUG_COLOR}[muk] Type: ${data[1]}${NO_COLOR}"
+    echo -e "${DEBUG_COLOR}[muk] Value: ${data[2]}${NO_COLOR}"
+    name=$(echo ${data[0]}|awk -F"/" '{print $NF}')
+    echo -e "${DEBUG_COLOR}[muk] ISO: $name${NO_COLOR}"
     if [ -f $ISO/${name} ];
     then
-        echo -e "${OK_COLOR}[muk] ISO already present${NO_COLOR}"
+        echo -e "${OK_COLOR}[muk] ISO ${name} already present${NO_COLOR}"
     else
         echo -e "${OK_COLOR}[muk] Download ISO for $name${NO_COLOR}"
         curl --progress-bar -o ${ISO}/${name} -L ${data[0]}
