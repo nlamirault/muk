@@ -53,7 +53,7 @@ terminal-font: "Fixed Regular 13"
 		selected_item_pixmap_style= "select_bkg_*.png"
 		menu_pixmap_style = "menu_bkg_*.png"
 		scrollbar = true
-		scrollbar_width = 14
+		scrollbar_width = 5
 		scrollbar_thumb = "sb_thumb_*.png"
 		scrollbar_frame = "sb_frame_*.png"
 }
@@ -77,44 +77,16 @@ terminal-font: "Fixed Regular 13"
 
 # Show an informational message.
 + hbox {
-       top = 100%-35
-       left = 20%
-       + label {
-               text = "'Up', 'Down', 'Enter', 'Esc': "
-               font = "Sans 12"
-               color = "#4c4c4c"
-               align = "left"
-       }
-       + label {
-               text = "Boot Selection     "
-               font = "Sans 12"
-               color = "#1692d0"
-               align = "left"
-       }
-       + label {
-               text = "E: "
-               font = "Sans 12"
-               color = "#4c4c4c"
-               align = "left"
-       }
-       + label {
-               text = "Edit options     "
-               font = "Sans 12"
-               color = "#1692d0"
-               align = "left"
-       }
-       + label {
-               text = "C: "
-               font = "Sans 12"
-               color = "#4c4c4c"
-               align = "left"
-       }
-       + label {
-               text = "GRUB Commandline"
-               font = "Sans 12"
-               color = "#1692d0"
-               align = "left"
-       }
+    top = 100%-35
+    left = 13%
+    + label { text = "↑↓" color = "#1692d0" }
+    + label { text = " : select       " color = "gainsboro" }
+    + label { text = "enter" color = "#1692d0" }
+    + label { text = " : boot       " color = "gainsboro" }
+    + label { text = "e" color = "#1692d0" }
+    + label { text = " : edit       " color = "gainsboro" }
+    + label { text = "c" color = "#1692d0" }
+    + label { text = " : command-line" color = "gainsboro" }
 }
 
 + label {
