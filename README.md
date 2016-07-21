@@ -42,22 +42,9 @@ Creates a multiboot USB key
         $ sudo make test device=/dev/sdb
 
 
-## Create the key :
+* You could test downloaded iso :
 
-    mkdir -p /run/media/nlamirault/MUK/boot/
-    sudo grub-install --target=i386-pc --recheck --boot-directory=/run/media/nlamirault/MUK/boot /dev/sdb
-
-
-
-## Test
-
-You could test your USB
-
-    $ sudo qemu-system-x86_64 -hda /dev/sdb
-
-You could test downloaded iso :
-
-    $ qemu-system-x86_64 -cdrom iso/ArchAssault-openbox-2015.05.25-x86_64.iso -m 1024
+        $ qemu-system-x86_64 -cdrom iso/archlinux-2016.07.01-dual.iso -m 1024
 
 
 ## License
