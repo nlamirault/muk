@@ -1,18 +1,58 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.0"
    width="267"
    height="267"
-   id="svg2">
+   id="svg2"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="fedora.svg">
+  <metadata
+     id="metadata4224">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1596"
+     inkscape:window-height="826"
+     id="namedview4222"
+     showgrid="false"
+     inkscape:zoom="0.88389513"
+     inkscape:cx="-83.154661"
+     inkscape:cy="133.5"
+     inkscape:window-x="0"
+     inkscape:window-y="53"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2" />
   <defs
      id="defs5" />
   <path
      d="M 266.62575,133.50613 C 266.62575,59.98128 207.02222,0.37583 133.49792,0.37583 C 60.00668,0.37583 0.42639,59.93123 0.37425,133.41225 L 0.37425,236.4333 C 0.4138,253.11763 13.94545,266.62417 30.64027,266.62417 L 133.55192,266.62417 C 207.05167,266.59532 266.62575,207.01142 266.62575,133.50613"
      id="voice"
-     style="fill:#294172" />
+     style="fill:#294172"
+     inkscape:export-xdpi="129.375"
+     inkscape:export-ydpi="129.375" />
   <path
      d="M 77.126289,142.09756 C 77.126289,142.09756 124.97104,142.09756 124.97104,142.09756 C 124.97104,142.09756 124.97104,189.94234 124.97104,189.94234 C 124.97104,216.35263 103.53659,237.78707 77.126289,237.78707 C 50.715979,237.78707 29.28153,216.35263 29.28153,189.94234 C 29.28153,163.53203 50.715979,142.09756 77.126289,142.09756 z"
      id="in"
